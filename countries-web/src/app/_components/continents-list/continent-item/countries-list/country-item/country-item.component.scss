@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.flag {
+    height: 19px;
+    width: 24px;
+    margin-right: 12px;
+}
+
+.favorite{
+    border-color: darkgray;
+    color: rgb(255, 196, 0);
+    margin-left: 4px;
+}

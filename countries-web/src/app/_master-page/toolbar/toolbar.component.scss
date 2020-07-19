@@ -1,0 +1,32 @@
+:host {
+    height: 90px;
+    background-color: dimgray;    
+    display: flex;
+    align-items: center;
+    padding: 0 80px 0;
+    box-sizing: border-box;    
+}
+
+.filter-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    .input-filter {
+        display: flex;
+        width: 600px;
+        min-width: 600px;
+        height: 30px;
+        background-color: white;
+        border: 0;
+        outline: none;
+        padding-left: 10px;
+    }
+    mat-icon{
+        position: absolute;
+        right: 10px;
+    }
+}
+
+
+
+      

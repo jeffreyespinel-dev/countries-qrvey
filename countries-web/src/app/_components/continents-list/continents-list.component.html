@@ -1,0 +1,2 @@
+<app-continent-item *ngFor="let item of continents; trackBy: trackById" [continent]="item"></app-continent-item>
+<strong *ngIf="continents.length == 0">No data found.</strong>

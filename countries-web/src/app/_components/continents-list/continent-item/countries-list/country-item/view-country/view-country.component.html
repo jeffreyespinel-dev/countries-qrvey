@@ -1,0 +1,24 @@
+<div class="full-width header">
+    <mat-icon class="icon-close" [mat-dialog-close] color="warn">clear</mat-icon>
+</div>
+<div class="country-info-container">
+    <div class="country-info">
+        <div class="country-name-container">
+            <p class="country-name"><strong>{{country.name}}</strong></p>
+            <mat-icon [ngClass]="{'favorite': country.favorite, 'no-favorite': !country.favorite }"
+                (click)="country.favorite = !country.favorite">
+                {{country.favorite ? 'star' : 'star_border'}}
+            </mat-icon>
+        </div>
+        <span class="item-info"><strong>Region:</strong>{{country.region}}</span>
+        <span class="item-info"><strong>Population:</strong>{{country.population | number}}</span>
+        <span class="item-info"><strong>Capital:</strong>{{country.capital}}</span>
+        <span class="item-info"><strong>Currency:</strong>{{getDisplayCurrencies(country.currencies)}}</span>
+        <span class="item-info"><strong>Languages:</strong>{{getDisplayLanguages(country.languages)}}</span>
+        <span class="item-info borders" *ngIf="country.borders.length > 0">
+            <strong>Border Countries:</strong>
+            {{getDisplayBorders(country.borders)}}
+        </span>
+    </div>
+    <img class="flag" src="{{country.flag}}" alt="flag" />
+</div>
